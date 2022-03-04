@@ -1,0 +1,61 @@
+:root{
+  --main-bg-color:white;
+  --main-font-color:#4a4a4a;
+  --main-font: 16px system-ui;
+} 
+html{
+  scroll-behavior:smooth;
+}
+html *{
+  letter-spacing: 0.7px;
+  font: var(--main-font);
+  margin:0px;
+}
+body{
+  margin:0px;
+  padding:0px;
+  background-color:var(--main-bg-color);
+  background-size: cover;
+  font: var(--main-font);
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  color:var(--main-font-color);
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+div{
+  display: flex;
+}
+.full-screen{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  margin:0;
+  padding:0;
+  overflow:auto;
+  z-index:-1;
+}
+.narrow{
+  margin:0 10% 10px 10%;
+}
+.column{
+  flex-direction: column;
+}
+.center{
+  display:flex;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap:wrap;
+}
+.center-text{
+  text-align: center;
+}
+.text-banner{
+  font-size: 45px;
+}
+.text-header{
+  font-size: 1.875rem;
+}
