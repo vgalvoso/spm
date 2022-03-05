@@ -1,6 +1,5 @@
 <?php
 set_time_limit(120);
-include "helper.php";
 class Model{
 
     protected $conn;
