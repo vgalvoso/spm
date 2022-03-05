@@ -4,14 +4,7 @@ $db = array(
         "server" => "localhost",
         "user" => "root",
         "pass" => "",
-        "dbname" => "mydatabase",
+        "dbname" => "logindb",
         "driver" => "mysql"
-    ),
-    "ms" => array(
-        "server" => "localhost",
-        "user" => "root",
-        "pass" => "",
-        "dbname" => "msdatabase",
-        "driver" => "mssql"
-    ),
+    )
 );
