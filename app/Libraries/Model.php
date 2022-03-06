@@ -1,5 +1,8 @@
 <?php
 set_time_limit(120);
+
+include "Helper.php";
+
 class Model{
 
     protected $conn;
@@ -34,7 +37,7 @@ class Model{
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }catch(PDOException $e){
             $this->error = $e->getMessage();
-            Helper::output($this->error);
+            output($this->error);
         }
     }
 
