@@ -1,6 +1,4 @@
 <?php
-
-class Helper{
     /**
      * Generate output in JSON format and terminate the script
      *
@@ -10,7 +8,7 @@ class Helper{
      * 
      * @return string JSON encoded string
      */ 
-    public static function output($message){
+    function output($message){
         echo $message;
         exit(0);  
     }
@@ -24,7 +22,7 @@ class Helper{
      * 
      * @return array indexed array
      */ 
-    public static function assocToIndexed($array){
+    function assocToIndexed($array){
         return array_map('extractAssocArray', $array);
     }
 
@@ -38,16 +36,15 @@ class Helper{
      * 
      * @return mixed value of associative array
      */ 
-    public static function extractAssocArray($value){
+    function extractAssocArray($value){
         $val = array_values($value);
         return $val[0];
     }
 
-    public static function download($fileName,$html,$extension){
+    function download($fileName,$html,$extension){
         // Headers for download 
         header("Content-Type: application/$extension"); 
         header("Content-Disposition: attachment; filename=$fileName.$extension"); 
 
         echo $html;
     }
-}
