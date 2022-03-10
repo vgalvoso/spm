@@ -10,7 +10,7 @@ This is a simple PHP MVC framework without extra files and codes that you don't 
 - Easy to work with database.
 
 ## Supports:
-1. PHP 7 and up
+1. PHP 5.3.1
 2. MYSQL
 3. MSSQL
 
