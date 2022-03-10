@@ -3,8 +3,8 @@ class Home extends Controller{
 
     public function __construct()
     {
-        $data = ["header" => "Simple MVC Framework",
-                "sub_header" => "Just what you need!"];
+        $data = array("header" => "Simple MVC Framework",
+                "sub_header" => "Just what you need!");
         $this->view("section/header");
         $this->view("home",$data);
         $this->view("section/footer");
