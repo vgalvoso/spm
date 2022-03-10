@@ -37,7 +37,7 @@ class Model{
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }catch(PDOException $e){
             $this->error = $e->getMessage();
-            output($this->error);
+            Helper::output($this->error);
         }
     }
 
