@@ -1,14 +1,6 @@
 # Welcome to (SPM) Simple PHP MVC, just what you need!
 This is a simple PHP MVC framework without extra files and codes that you don't need.
 
-- This is open source, feel free to contribute.
-- For small to mid sized projects.
-- No need to use composer.
-- No dependencies.
-- No need to configure web server.
-- Easy to deploy alongside other SPM projects on same server.
-- Easy to work with database.
-
 ## Supports:
 1. PHP 5.3.1
 2. MYSQL
