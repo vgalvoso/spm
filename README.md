@@ -1,5 +1,5 @@
 # Welcome to (SPM) Simple PHP MVC, just what you need!
-This is a simple PHP MVC framework without extra files and codes that you don't need.
+This is a simple PHP MVC framework without too much dependencies that you don't need.
 
 ## Supports:
 1. PHP 5.3.1
