@@ -7,7 +7,7 @@ This is a simple PHP MVC framework without too much dependencies that you don't 
 3. MSSQL
 
 ## Getting Started
-1. Download or clone the repo.
+1. Download the [latest release].
 2. Configure your database to app/Libraries/Database.php.
 3. Rename the root folder with your project name.
 4. Now you can create Controllers,Views and Models.
@@ -193,3 +193,4 @@ And we can also get the last inserted id
 ```php
 $home_model->lastId();
 ```
+[latest release]: https://github.com/vgalvoso/spm/releases
