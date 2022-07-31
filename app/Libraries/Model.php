@@ -86,7 +86,7 @@ class Model{
         try{
             $stmt = $this->conn->prepare($query);
             $stmt->execute($inputs);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         }catch(PDOException $e){
             $this->error = $e->getMessage();
             return false;
