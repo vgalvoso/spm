@@ -1,4 +1,5 @@
 {
     "name": "vgalvoso/spm",
-    "license": "MIT"
+    "license": "MIT",
+    "minimum-stability": "stable"
 }
