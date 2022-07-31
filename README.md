@@ -2,12 +2,13 @@
 This is a simple PHP MVC framework without too much dependencies that you don't need.
 
 ## Supports:
-1. PHP 5.3.1
+1. PHP 5.3.1^
 2. MYSQL
 3. MSSQL
+4. SQLite
 
 ## Getting Started
-1. Download the [latest release].
+1. Download the [latest release] or install via composer [composer create-project vgalvoso/spm].
 2. Configure your database to app/Libraries/Database.php.
 3. Rename the root folder with your project name.
 4. Now you can create Controllers,Views and Models.
