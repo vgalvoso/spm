@@ -16,5 +16,6 @@ class Home extends Controller{
     
     public static function sampleGet($get_data){
         //now you can get values from GET request
+        //fdsfsd
     }
 }
