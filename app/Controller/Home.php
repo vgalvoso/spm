@@ -1,21 +1,24 @@
 <?php
-class Home extends Controller{
+namespace App\Controller;
 
-    public function __construct()
+class Home{
+
+    public static function index()
     {
         $data = array("header" => "Simple PHP MVC Framework",
                 "sub_header" => "Just what you need!");
-        $this->view("section/header");
-        $this->view("home",$data);
-        $this->view("section/footer");
+        view("section/header");
+        view("home",$data);
+        view("section/footer");
     }
 
-    public static function samplePost($post_data){
+    public static function samplePost($postData){
         //now you can get values from POST request
+        var_dump($postData);
     }
     
-    public static function sampleGet($get_data){
+    public static function sampleGet($getData){
         //now you can get values from GET request
-        //fdsfsd
+        var_dump($getData);
     }
 }

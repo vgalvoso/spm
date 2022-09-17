@@ -1,7 +1,8 @@
 <?php
-set_time_limit(120);
-
-include "Helper.php";
+namespace App\Libraries;
+use PDO;
+use PDOException;
+use App\Config\Database;
 
 class Model{
 
@@ -24,7 +25,7 @@ class Model{
      * @author Van
      */
     public function __construct($dbase="default",$server="",$user="",$pass="",$dbname="",$driver=""){
-        include "Database.php";
+        $db = Database::db();
         if($dbase != null){
             $server = $db[$dbase]["server"];
             $user = $db[$dbase]["user"];
@@ -37,7 +38,7 @@ class Model{
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }catch(PDOException $e){
             $this->error = $e->getMessage();
-            Helper::output($this->error);
+            output($this->error);
         }
     }
 
@@ -104,6 +105,24 @@ class Model{
         }
     }
 
+    public function insert($table,$values){
+        try{
+            $keys = array_keys($values);
+            $newKeys = [];
+            foreach($keys as $key){
+                array_push($newKeys,":$key");
+            }
+            $refs = implode(",",$newKeys);
+            $fields = implode(",",$keys);
+            $query = "INSERT INTO $table($fields) VALUES($refs);";
+           $stmt = $this->conn->prepare($query);
+            return $stmt->execute($values);
+        }catch(PDOException $e){
+            $this->error = $e->getMessage();
+            return false;
+        }
+    }
+    
     public function lastId($field=null){
         return $this->conn->lastInsertId($field);
     }
