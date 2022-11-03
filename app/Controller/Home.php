@@ -14,11 +14,11 @@ class Home{
 
     public static function samplePost($postData){
         //now you can get values from POST request
-        var_dump($postData);
+        extract($postData);
     }
     
     public static function sampleGet($getData){
         //now you can get values from GET request
-        var_dump($getData);
+        extract($getData);
     }
 }
