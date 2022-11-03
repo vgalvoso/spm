@@ -35,7 +35,7 @@ use App\Controller\Home;
 post('post',Home::class,"samplePost");
 ```
 
-To get data from GET request, use getI() function
+To get data from GET request, use get() function
 ```php
 //routes.php
 use App\Controller\Home;
@@ -128,7 +128,7 @@ $home_model = new HomeModel("ms");
 We can also use other database even it is not declared in Database.php
 ```php
 //app/Controller/Home.php
-$home_model = new HomeModel(null,$host,$user,$pass,$dbname,$driver(mysq;/mssql));
+$home_model = new HomeModel(null,$host,$user,$pass,$dbname,$driver(mysql/mssql));
 ```
 
 Select single item

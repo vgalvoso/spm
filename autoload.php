@@ -5,6 +5,7 @@ $path = substr($path, 1);
 //remove string from start to second "/"
 $path = substr($path, strpos($path, "/") + 1);
 define('PATH',$path);
+define('BASE_DIR',__DIR__);
 spl_autoload_register(function($className) {
     $file = $className . '.php';
 	if (file_exists($file)) {

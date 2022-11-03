@@ -2,6 +2,7 @@
 namespace App\Libraries;
 use PDO;
 use PDOException;
+use App\Libraries\DotEnv;
 use App\Config\Database;
 
 class Model{
@@ -26,6 +27,8 @@ class Model{
      */
     public function __construct($dbase="default",$server="",$user="",$pass="",$dbname="",$driver=""){
         $db = Database::db();
+        
+        (new DotEnv(BASE_DIR . '\.env'))->load();
         if($dbase != null){
             $server = $db[$dbase]["server"];
             $user = $db[$dbase]["user"];
