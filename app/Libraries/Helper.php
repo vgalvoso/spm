@@ -1,4 +1,6 @@
 <?php
+    use App\Libraries\DotEnv;
+    (new DotEnv(BASE_DIR . '/.env'))->load();
     /**
      * Generate output in JSON format and terminate the script
      *
@@ -62,7 +64,7 @@
     if(! function_exists('route')){
         function route($route){
             if($route == "")
-                return header("Location: http://localhost/hris");
+                return header("Location: ".getenv('APP_URL'));
             header("Location: $route");
             exit();
         }
@@ -87,4 +89,8 @@
     function notFound(){
         header("HTTP/1.1 404 Not Found");
         exit("URL not found");
+    }
+
+    function esc($string){
+        return htmlspecialchars($string);
     }
