@@ -1,13 +1,18 @@
 <?php
-$path = $_SERVER['REQUEST_URI'];
-//get $path except first "/"
-$path = substr($path, 1);
-//remove string from start to second "/"
-$path = substr($path, strpos($path, "/") + 1);
+$path = "";
+if(isset($_SERVER['REQUEST_URI'])){
+	$path = $_SERVER['REQUEST_URI'];
+	//get $path except first "/"
+	$path = substr($path, 1);
+	//remove string from start to second "/"
+	$path = substr($path, strpos($path, "/") + 1);	
+}else{
+	$path = isset($_SERVER['argv'][1]) ? $_SERVER['argv'][1] : '';
+}
 define('PATH',$path);
 define('BASE_DIR',__DIR__);
 spl_autoload_register(function($className) {
-    $file = $className . '.php';
+	$file = $className . '.php';
 	if (file_exists($file)) {
 		include $file;
 	}

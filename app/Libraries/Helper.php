@@ -86,6 +86,13 @@
         return;
     }
 
+    function cli($routeName,$class,$function){
+        if(PATH == $routeName){
+            $class::$function();
+        }
+        return;
+    }
+
     function notFound(){
         header("HTTP/1.1 404 Not Found");
         exit("URL not found");

@@ -43,6 +43,13 @@ use App\Controller\Home;
 //get(route name,class,static function to call)
 get('get',Home::class,"sampleGet");
 ```
+
+To call cli use cli() function
+```php
+//routes.php sample
+cli('comand',Command::class,"executeCommand");
+```
+
 ## Controllers
 Controllers responds to hyperlinks,form actions and url inputs.
 
